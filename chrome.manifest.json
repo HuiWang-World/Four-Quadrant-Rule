@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "四象限法则",
+  "description": "Chrome四象限法则插件，用于标记事情轻重缓急",
+  "version": "##version##",
+  "action": {
+    "default_icon": {
+      "16": "./static/icons/jizhi-16.png",
+      "32": "./static/icons/jizhi-32.png",
+      "48": "./static/icons/jizhi-64.png",
+      "128": "./static/icons/jizhi-128.png"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}

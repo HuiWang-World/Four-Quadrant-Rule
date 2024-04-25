@@ -7,31 +7,9 @@ import {fileURLToPath} from 'url'
 
 //获取项目路径
 const __dirname = dirname(fileURLToPath(import.meta.url))
-
+// 打包工具
 import archiver from 'archiver'
 
-/*
-
-//写入zip文件
-function release(path,name){
-    {
-        name = `ctool_${name}`
-        if (!existsSync(path)) {
-            throw new Error(`release path "${path}" not found`)
-        }
-        const isFile = statSync(path).isFile()
-        let releaseFile = "";
-        if (isFile) {
-            releaseFile = join(getReleasePath(), name)
-            copyFileSync(path, releaseFile)
-        } else {
-            releaseFile = join(getReleasePath(), `${name}.zip`)
-            await require('zip-a-folder').zip(path, releaseFile);
-        }
-        return releaseFile;
-    }
-}
-*/
 
 
 // 遍历浏览器配置文件，判断文件类型，生成不同浏览器配置文件
@@ -56,6 +34,8 @@ fs.readdirSync(__dirname).forEach(filename => {
         cpSync(build, `${browserPath}`, {recursive: true})
         // 配置文件
         cpSync(path.resolve(__dirname, `./${filename}`), manifestPath, {recursive: true})
+        //静态数据
+        cpSync(path.resolve(__dirname, `./src/static`), `${browserPath}/static`, {recursive: true})
         //获取 'package.json' 中的版本号
         const version = JSON.parse(readFileSync(path.resolve(__dirname, 'package.json')).toString())['version'] || "";
         // 写入版本号

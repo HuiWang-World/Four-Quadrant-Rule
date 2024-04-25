@@ -5,10 +5,12 @@
   "version": "##version##",
   "action": {
     "default_icon": {
-      "16": "./static/icons/jizhi-16.png",
-      "32": "./static/icons/jizhi-32.png",
-      "48": "./static/icons/jizhi-64.png",
-      "128": "./static/icons/jizhi-128.png"
+      "16": "./static/icons/color-icon-16.png",
+      "32": "./static/icons/color-icon-32.png",
+      "48": "./static/icons/color-icon-48.png",
+      "64": "./static/icons/color-icon-64.png",
+      "128": "./static/icons/color-icon-128.png",
+      "256": "./static/icons/color-icon-256.png"
     }
   },
   "chrome_url_overrides": {

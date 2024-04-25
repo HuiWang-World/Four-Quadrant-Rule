@@ -8,3 +8,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>,
 )
+
+// 屏蔽鼠标右键菜单
+document.oncontextmenu = function () {
+    return false;
+};

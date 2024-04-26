@@ -13,3 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 document.oncontextmenu = function () {
     return false;
 };
+// 阻止右键菜单的默认行为
+document.oncontextmenu=function (e){
+    e.preventDefault();
+}

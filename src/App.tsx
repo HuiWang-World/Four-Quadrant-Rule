@@ -1,39 +1,123 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import {Button} from "@mui/material";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <Box display="flex" flexDirection="row" component="section" sx={{width: '100vw', height: '100vh'}}>
+                <Box display="flex" flexDirection="column" component="section" sx={{height: '100vh'}}>
+                    <Typography sx={{
+                        mt: 0.7, mr: 0.25, ml: 0.5,
+                        textAlign: 'center',
+                        height: '2vh',
+                        bgcolor: '#F8E6E3',
+                        color: '#F09180',
+                        borderRadius: '8px'
+                    }}>紧急&重要</Typography>
+                    <Box component="section"
+                         sx={{
+                             my: 0.25, mr: 0.25, ml: 0.5,
+                             width: '49.70vw',
+                             height: '47.25vh',
+                             bgcolor: '#F8E6E3',
+                             borderRadius: '8px'
+                         }}>
+                        <Typography sx={{
+                            textAlign: 'center',
+                            verticalAlign: 'middle',  // 垂直居中
+                            color: '#F09180',
+                            height: '47.25vh',
+                            lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
+                            borderRadius: '8px'
+                        }}>优先解决</Typography>
+                    </Box>
+                    <Typography sx={{
+                        mt: 0.25, mr: 0.25, ml: 0.5,
+                        textAlign: 'center',
+                        height: '2vh',
+                        bgcolor: '#E2ECFA',
+                        color: '#7FAEF2',
+                        borderRadius: '8px'
+                    }}>紧急&不重要</Typography>
+                    <Box component="section"
+                         sx={{
+                             mt: 0.25,
+                             mr: 0.25,
+                             ml: 0.5,
+                             width: '49.70vw',
+                             height: '47.25vh',
+                             bgcolor: '#E2ECFA',
+                             borderRadius: '8px'
+                         }}>
+                        <Typography sx={{
+                            textAlign: 'center',
+                            verticalAlign: 'middle',  // 垂直居中
+                            color: '#7FAEF2',
+                            height: '47.25vh',
+                            lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
+                            borderRadius: '8px'
+                        }}>给别人做</Typography>
+                    </Box>
+                </Box>
+                <Box display="flex" flexDirection="column" component="section" sx={{height: '100vh'}}>
+                    <Typography sx={{
+                        mt: 0.7, ml: 0.25, mr: 0.5,
+                        textAlign: 'center',
+                        height: '2vh',
+                        bgcolor: '#FBF2DD',
+                        color: '#F4BE5B',
+                        borderRadius: '8px'
+                    }}>不紧急&重要</Typography>
+                    <Box component="section"
+                         sx={{
+                             my: 0.25, ml: 0.25, mr: 0.5,
+                             width: '49.70vw',
+                             height: '47.25vh',
+                             bgcolor: '#FBF2DD',
+                             borderRadius: '8px'
+                         }}>
+                        <Typography sx={{
+                            textAlign: 'center',
+                            verticalAlign: 'middle',  // 垂直居中
+                            color: '#F4BE5B',
+                            height: '47.25vh',
+                            lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
+                            borderRadius: '8px'
+                        }}>制定计划去做</Typography>
+                    </Box>
+                    <Typography sx={{
+                        mt: 0.25, ml: 0.25, mr: 0.5,
+                        textAlign: 'center',
+                        height: '2vh',
+                        bgcolor: '#E4F3DA',
+                        color: '#7CCE5A',
+                        borderRadius: '8px'
+                    }}>不紧急&不重要</Typography>
+                    <Box component="section"
+                         sx={{
+                             mt: 0.25, ml: 0.25, mr: 0.5,
+                             width: '49.70vw',
+                             height: '47.25vh',
+                             bgcolor: '#E4F3DA',
+                             borderRadius: '8px'
+                         }}>
+                        <Typography sx={{
+                            textAlign: 'center',
+                            verticalAlign: 'middle',  // 垂直居中
+                            color: '#7CCE5A',
+                            height: '47.25vh',
+                            lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
+                            borderRadius: '8px'
+                        }}>有空再说</Typography>
+                    </Box>
+                </Box>
+            </Box>
+        </>
+    )
+
+
 }
+
 
 export default App

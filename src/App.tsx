@@ -14,7 +14,7 @@ function App() {
                         bgcolor: '#F8E6E3',
                         color: '#F09180',
                         borderRadius: '8px'
-                    }}>紧急&重要</Typography>
+                    }}>紧急 & 重要</Typography>
                     <Box component="section"
                          sx={{
                              my: 0.25, mr: 0.25, ml: 0.5,
@@ -39,7 +39,7 @@ function App() {
                         bgcolor: '#E2ECFA',
                         color: '#7FAEF2',
                         borderRadius: '8px'
-                    }}>紧急&不重要</Typography>
+                    }}>紧急 & 不重要</Typography>
                     <Box component="section"
                          sx={{
                              mt: 0.25,
@@ -68,7 +68,7 @@ function App() {
                         bgcolor: '#FBF2DD',
                         color: '#F4BE5B',
                         borderRadius: '8px'
-                    }}>不紧急&重要</Typography>
+                    }}>不紧急 & 重要</Typography>
                     <Box component="section"
                          sx={{
                              my: 0.25, ml: 0.25, mr: 0.5,
@@ -93,7 +93,7 @@ function App() {
                         bgcolor: '#E4F3DA',
                         color: '#7CCE5A',
                         borderRadius: '8px'
-                    }}>不紧急&不重要</Typography>
+                    }}>不紧急 & 不重要</Typography>
                     <Box component="section"
                          sx={{
                              mt: 0.25, ml: 0.25, mr: 0.5,

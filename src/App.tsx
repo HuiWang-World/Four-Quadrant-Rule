@@ -13,7 +13,8 @@ function App() {
                         height: '2vh',
                         bgcolor: '#F8E6E3',
                         color: '#F09180',
-                        borderRadius: '8px'
+                        borderRadius: '8px',
+                        userSelect: 'none', // 禁止文本选择
                     }}>紧急 & 重要</Typography>
                     <Box component="section"
                          sx={{
@@ -29,7 +30,8 @@ function App() {
                             color: '#F09180',
                             height: '47.25vh',
                             lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
-                            borderRadius: '8px'
+                            borderRadius: '8px',
+                            userSelect: 'none', // 禁止文本选择
                         }}>优先解决</Typography>
                     </Box>
                     <Typography sx={{
@@ -38,7 +40,8 @@ function App() {
                         height: '2vh',
                         bgcolor: '#E2ECFA',
                         color: '#7FAEF2',
-                        borderRadius: '8px'
+                        borderRadius: '8px',
+                        userSelect: 'none', // 禁止文本选择
                     }}>紧急 & 不重要</Typography>
                     <Box component="section"
                          sx={{
@@ -56,7 +59,8 @@ function App() {
                             color: '#7FAEF2',
                             height: '47.25vh',
                             lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
-                            borderRadius: '8px'
+                            borderRadius: '8px',
+                            userSelect: 'none', // 禁止文本选择
                         }}>给别人做</Typography>
                     </Box>
                 </Box>
@@ -67,7 +71,8 @@ function App() {
                         height: '2vh',
                         bgcolor: '#FBF2DD',
                         color: '#F4BE5B',
-                        borderRadius: '8px'
+                        borderRadius: '8px',
+                        userSelect: 'none', // 禁止文本选择
                     }}>不紧急 & 重要</Typography>
                     <Box component="section"
                          sx={{
@@ -83,7 +88,8 @@ function App() {
                             color: '#F4BE5B',
                             height: '47.25vh',
                             lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
-                            borderRadius: '8px'
+                            borderRadius: '8px',
+                            userSelect: 'none', // 禁止文本选择
                         }}>制定计划去做</Typography>
                     </Box>
                     <Typography sx={{
@@ -92,7 +98,8 @@ function App() {
                         height: '2vh',
                         bgcolor: '#E4F3DA',
                         color: '#7CCE5A',
-                        borderRadius: '8px'
+                        borderRadius: '8px',
+                        userSelect: 'none', // 禁止文本选择
                     }}>不紧急 & 不重要</Typography>
                     <Box component="section"
                          sx={{
@@ -108,7 +115,8 @@ function App() {
                             color: '#7CCE5A',
                             height: '47.25vh',
                             lineHeight: '47.25vh',  // 设置行高，确保文本垂直居中
-                            borderRadius: '8px'
+                            borderRadius: '8px',
+                            userSelect: 'none', // 禁止文本选择
                         }}>有空再说</Typography>
                     </Box>
                 </Box>

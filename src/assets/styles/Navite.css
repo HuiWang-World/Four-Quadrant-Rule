@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* html宽度 */
+/* html高度 */
+/* 圆角 */
+/* body html */
+body, html {
+  margin: 0;
+  padding: 0;
+  /* 确保html和body的高度是100% */
+  height: 100vh;
+  /* 确保宽度是100% */
+  width: 100vw;
+  /*火狐*/
+  -moz-user-select: none;
+  /*webkit浏览器*/
+  -webkit-user-select: none;
+  /*IE10*/
+  -ms-user-select: none;
+  /*早期浏览器*/
+  -khtml-user-select: none;
+  /* 文本禁止选中 */
+  user-select: none;
+}
+
+/*中心容器*/
+.grid-container {
+  display: inline-grid;
+  /* 定义两列，每列占用可用空间的一半 */
+  grid-template-columns: 1fr 1fr;
+  /* 定义两行，高度根据内容自适应 */
+  grid-template-rows: auto auto;
+  /* 定义网格行和列之间的间隙 行 */
+  row-gap: 0.415rem;
+  /* 定义网格行和列之间的间隙 列 */
+  column-gap: 0.35rem;
+}
+
+/* 容器内边距 */
+/* 卡片宽度 */
+/* 卡片高度 */
+/*4个卡片*/
+.grid-card {
+  /* 背景色 */
+  /* 边框 */
+  /* 文本居中 */
+  text-align: center;
+  width: 49.85vw;
+  height: 49.5vh;
+}
+
+.grid-label, .grid-label-not-urgent-not-important, .grid-label-not-urgent-important, .grid-label-urgent-not-important, .grid-label-urgent-important {
+  /* 背景色 */
+  background-color: #f0f0f0;
+  /* 边框 */
+  border: 0.1rem solid #ccc;
+  /* 圆角 */
+  border-radius: 0.6rem;
+  /*设置高度*/
+  height: 1.98vh;
+  /* 行高 */
+  line-height: 1.98vh;
+  /*设置宽度 宽度减去边距*/
+  width: 49.65vw;
+  /* 使标签能够接受宽度设置 */
+  display: inline-block;
+}
+
+/* 紧急 & 重要 */
+.grid-label-urgent-important {
+  /* 背景颜色 */
+  background-color: #F8E6E3;
+}
+
+/* 紧急 & 不重要 */
+.grid-label-urgent-not-important {
+  /* 背景颜色 */
+  background-color: #E2ECFA;
+}
+
+/* 不紧急 & 重要 */
+.grid-label-not-urgent-important {
+  /* 背景颜色 */
+  background-color: #FBF2DD;
+}
+
+/* 不紧急 & 不重要 */
+.grid-label-not-urgent-not-important {
+  /* 背景颜色 */
+  background-color: #E4F3DA;
+}
+
+/*表格*/
+.grid-grid {
+  /* 背景色 */
+  background-color: #f0f0f0;
+  /* 边框 */
+  border: 0.1rem solid #ccc;
+  /* 圆脚 */
+  border-radius: 0.6rem;
+  /*设置高度*/
+  height: 47.025vh;
+  /* 容器内边距 */
+  margin-top: 0.1rem;
+}
+
+/*# sourceMappingURL=Navite.css.map */

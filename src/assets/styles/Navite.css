@@ -36,7 +36,7 @@ body, html {
   /* 定义两行，高度根据内容自适应 */
   grid-template-rows: auto auto;
   /* 定义网格行和列之间的间隙 行 */
-  row-gap: 0.45rem;
+  row-gap: 0.33rem;
   /* 定义网格行和列之间的间隙 列 */
   column-gap: 0.4rem;
   /* 同时水平和垂直居中 外部容器 保持div剧中 */
@@ -62,7 +62,6 @@ body, html {
   /* 背景色 */
   background-color: #f0f0f0;
   /* 边框 */
-  border: 0.1rem solid #ccc;
   /* 圆角 */
   border-radius: 0.6rem;
   /*设置高度*/
@@ -70,7 +69,7 @@ body, html {
   /* 行高 */
   line-height: 1.97vh;
   /*设置宽度 宽度减去边距*/
-  width: 49.325vw;
+  width: 49.525vw;
   /* 使标签能够接受宽度设置 */
   display: inline-block;
 }
@@ -78,13 +77,12 @@ body, html {
 /*表格*/
 .grid-grid, .grid-grid-not-urgent-not-important, .grid-grid-not-urgent-important, .grid-grid-urgent-not-important, .grid-grid-urgent-important {
   /* 边框 */
-  border: 0.1rem solid #ccc;
   /* 圆脚 */
   border-radius: 0.6rem;
   /*设置高度*/
-  height: 46.7875vh;
+  height: 47.03375vh;
   /* 容器内边距 */
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
 }
 
 /* 紧急 & 重要 urgent-important */

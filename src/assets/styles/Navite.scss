@@ -38,7 +38,7 @@ body, html {
   /* 定义两行，高度根据内容自适应 */
   grid-template-rows: auto auto;
   /* 定义网格行和列之间的间隙 行 */
-  row-gap: 0.45rem;
+  row-gap: 0.33rem;
   /* 定义网格行和列之间的间隙 列 */
   column-gap: 0.4rem;
   /* 同时水平和垂直居中 外部容器 保持div剧中 */
@@ -70,7 +70,7 @@ $grid-card-height: 49.25vh;
   /* 背景色 */
   background-color: #f0f0f0;
   /* 边框 */
-  border: 0.1rem solid #ccc;
+  //border: 0.06rem solid #ccc;
   /* 圆角 */
   border-radius: $border-radius;
   /*设置高度*/
@@ -78,7 +78,7 @@ $grid-card-height: 49.25vh;
   /* 行高 */
   line-height: calc($grid-card-height * 0.04);
   /*设置宽度 宽度减去边距*/
-  width: $grid-card-width - 0.2;
+  width: $grid-card-width;
   /* 使标签能够接受宽度设置 */
   display: inline-block;
 }
@@ -87,13 +87,13 @@ $grid-card-height: 49.25vh;
 /*表格*/
 .grid-grid {
   /* 边框 */
-  border: 0.1rem solid #ccc;
+  //border: 0.06rem solid #ccc;
   /* 圆脚 */
   border-radius: $border-radius;
   /*设置高度*/
-  height: calc(($grid-card-height) - calc($grid-card-height * 0.05));
+  height: calc(($grid-card-height) - calc($grid-card-height * 0.045));
   /* 容器内边距 */
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
 }
 
 

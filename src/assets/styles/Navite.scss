@@ -1,15 +1,17 @@
-@charset "UTF-8";
 /* html宽度 */
+$html-width: 100vw;
 /* html高度 */
+$html-height: 100vh;
 /* 圆角 */
+$border-radius: 0.6rem;
 /* body html */
 body, html {
   margin: 0;
   padding: 0;
   /* 确保html和body的高度是100% */
-  height: 100vh;
+  height: $html-height;
   /* 确保宽度是100% */
-  width: 100vw;
+  width: $html-width;
   /*火狐*/
   -moz-user-select: none;
   /*webkit浏览器*/
@@ -25,7 +27,7 @@ body, html {
 /* 外部容器 保持div剧中 */
 .container {
   display: flex;
-  height: 100vh;
+  height: $html-height;
 }
 
 /*中心容器*/
@@ -43,99 +45,87 @@ body, html {
   margin: auto;
   /* 字体大小 */
   font-size: 1.6em;
+
   /* 容器内边距 */
+  //padding: 0.1rem
 }
 
 /* 卡片宽度 */
+$grid-card-width: 49.525vw;
 /* 卡片高度 */
+$grid-card-height: 49.25vh;
 /*4个卡片*/
 .grid-card {
   /* 背景色 */
+  //background-color: #f0f0f0
   /* 边框 */
+  //border: 0.1rem solid #ccc
   /* 文本居中 */
   text-align: center;
-  width: 49.525vw;
-  height: 49.25vh;
+  width: $grid-card-width;
+  height: $grid-card-height;
 }
 
-.grid-label, .grid-label-not-urgent-not-important, .grid-label-not-urgent-important, .grid-label-urgent-not-important, .grid-label-urgent-important {
+.grid-label {
   /* 背景色 */
   background-color: #f0f0f0;
   /* 边框 */
   border: 0.1rem solid #ccc;
   /* 圆角 */
-  border-radius: 0.6rem;
+  border-radius: $border-radius;
   /*设置高度*/
-  height: 1.97vh;
+  height: calc($grid-card-height * 0.04);
   /* 行高 */
-  line-height: 1.97vh;
+  line-height: calc($grid-card-height * 0.04);
   /*设置宽度 宽度减去边距*/
-  width: 49.325vw;
+  width: $grid-card-width - 0.2;
   /* 使标签能够接受宽度设置 */
   display: inline-block;
 }
 
+
 /*表格*/
-.grid-grid, .grid-grid-not-urgent-not-important, .grid-grid-not-urgent-important, .grid-grid-urgent-not-important, .grid-grid-urgent-important {
+.grid-grid {
   /* 边框 */
   border: 0.1rem solid #ccc;
   /* 圆脚 */
-  border-radius: 0.6rem;
+  border-radius: $border-radius;
   /*设置高度*/
-  height: 46.7875vh;
+  height: calc(($grid-card-height) - calc($grid-card-height * 0.05));
   /* 容器内边距 */
   margin-top: 0.1rem;
 }
+
 
 /* 紧急 & 重要 urgent-important */
 /* 紧急 & 不重要 urgent-not-important */
 /* 不紧急 & 重要 not-urgent-important */
 /* 不紧急 & 不重要 not-urgent-not-important */
+
 /* 样式循环 */
 /* 1:背景颜色 2:字体颜色 */
+$cssList: (urgent-important:(#F8E6E3, #F09180)),
+(urgent-not-important:(#E2ECFA, #7FAEF2)),
+(not-urgent-important:(#FBF2DD, #F4BE5B)),
+(not-urgent-not-important:(#E4F3DA, #7CCE5A));
+
+
 /* 循环设置样式 */
-.grid-label-urgent-important {
-  /* 背景颜色 */
-  background-color: #F8E6E3;
-  color: #F09180;
+@each $i in $cssList {
+  @each $key, $value in $i {
+    .grid-label-#{$key} {
+      @extend .grid-label;
+      /* 背景颜色 */
+      background-color: nth($value, 1);
+      color: nth($value, 2)
+    }
+
+    .grid-grid-#{$key} {
+      @extend .grid-grid;
+      /* 背景颜色 */
+      background-color: nth($value, 1);
+    }
+  }
 }
 
-.grid-grid-urgent-important {
-  /* 背景颜色 */
-  background-color: #F8E6E3;
-}
 
-.grid-label-urgent-not-important {
-  /* 背景颜色 */
-  background-color: #E2ECFA;
-  color: #7FAEF2;
-}
-
-.grid-grid-urgent-not-important {
-  /* 背景颜色 */
-  background-color: #E2ECFA;
-}
-
-.grid-label-not-urgent-important {
-  /* 背景颜色 */
-  background-color: #FBF2DD;
-  color: #F4BE5B;
-}
-
-.grid-grid-not-urgent-important {
-  /* 背景颜色 */
-  background-color: #FBF2DD;
-}
-
-.grid-label-not-urgent-not-important {
-  /* 背景颜色 */
-  background-color: #E4F3DA;
-  color: #7CCE5A;
-}
-
-.grid-grid-not-urgent-not-important {
-  /* 背景颜色 */
-  background-color: #E4F3DA;
-}
-
-/*# sourceMappingURL=Navite.css.map */

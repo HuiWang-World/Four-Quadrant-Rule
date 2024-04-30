@@ -23,6 +23,11 @@ body, html
   /* 文本禁止选中 */
   user-select: none
 
+/* 外部容器 保持div剧中 */
+.container
+  display: flex
+  height: $html-height
+
 /*中心容器*/
 .grid-container
   display: inline-grid
@@ -31,17 +36,21 @@ body, html
   /* 定义两行，高度根据内容自适应 */
   grid-template-rows: auto auto
   /* 定义网格行和列之间的间隙 行 */
-  row-gap: 0.415rem
+  row-gap: 0.45rem
   /* 定义网格行和列之间的间隙 列 */
-  column-gap: 0.35rem
+  column-gap: 0.4rem
+  /* 同时水平和垂直居中 外部容器 保持div剧中 */
+  margin: auto
+  /* 字体大小 */
+  font-size: 1.6em
 
 /* 容器内边距 */
 //padding: 0.1rem
 
 /* 卡片宽度 */
-$grid-card-width: 49.85vw
+$grid-card-width: 49.525vw
 /* 卡片高度 */
-$grid-card-height: 49.5vh
+$grid-card-height: 49.25vh
 /*4个卡片*/
 .grid-card
   /* 背景色 */
@@ -70,33 +79,44 @@ $grid-card-height: 49.5vh
   display: inline-block
 
 /* 紧急 & 重要 */
+$color-urgent-important-background-color: #F8E6E3
+/* 紧急 & 不重要 */
+$color-not-important-background-color: #E2ECFA
+/* 不紧急 & 重要 */
+$color-not-urgent-important-background-color: #FBF2DD
+/* 不紧急 & 不重要 */
+$color-not-urgent-not-important-background-color: #E4F3DA
+
+/* 紧急 & 重要 */
 .grid-label-urgent-important
   @extend .grid-label
   /* 背景颜色 */
-  background-color: #F8E6E3
+  background-color: $color-urgent-important-background-color
+  color: #F09180
 
 /* 紧急 & 不重要 */
 .grid-label-urgent-not-important
   @extend .grid-label
   /* 背景颜色 */
-  background-color: #E2ECFA
+  background-color: $color-not-important-background-color
+  color: #7FAEF2
 
 /* 不紧急 & 重要 */
 .grid-label-not-urgent-important
   @extend .grid-label
   /* 背景颜色 */
-  background-color: #FBF2DD
+  background-color: $color-not-urgent-important-background-color
+  color: #F4BE5B
 
 /* 不紧急 & 不重要 */
 .grid-label-not-urgent-not-important
   @extend .grid-label
   /* 背景颜色 */
-  background-color: #E4F3DA
+  background-color: $color-not-urgent-not-important-background-color
+  color: #7CCE5A
 
 /*表格*/
 .grid-grid
-  /* 背景色 */
-  background-color: #f0f0f0
   /* 边框 */
   border: 0.1rem solid #ccc
   /* 圆脚 */
@@ -106,4 +126,29 @@ $grid-card-height: 49.5vh
   /* 容器内边距 */
   margin-top: 0.1rem
 
+/* 紧急 & 重要 */
+.grid-grid-urgent-important
+  @extend .grid-grid
+  /* 背景颜色 */
+  background-color: $color-urgent-important-background-color
 
+
+
+/* 不紧急 & 重要 */
+.grid-grid-urgent-not-important
+  @extend .grid-grid
+  /* 背景颜色 */
+  background-color: $color-not-urgent-important-background-color
+
+
+/* 紧急 & 不重要 */
+.grid-grid-not-urgent-important
+  @extend .grid-grid
+  /* 背景颜色 */
+  background-color:  $color-not-important-background-color
+
+/* 不紧急 & 不重要 */
+.grid-grid-not-urgent-not-important
+  @extend .grid-grid
+  /* 背景颜色 */
+  background-color:  $color-not-urgent-not-important-background-color
